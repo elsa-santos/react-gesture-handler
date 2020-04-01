@@ -1,0 +1,54 @@
+{
+    "name": "react-gesture-handler",
+    "title": "react-gesture-handler",
+    "version": "0.0.3",
+    "description": "React component to detect touch gestures",
+    "keywords": [
+        "react",
+        "react-component",
+        "touch",
+        "gestures",
+        "gesture",
+        "drag",
+        "pinch",
+        "rotate",
+        "pan",
+        "press",
+        "swipe",
+        "tap",
+        "hammerjs"
+    ],
+    "license": "MIT",
+    "author": "Elsa Santos <elsasantos@outlook.com>",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/elsa-santos/react-gesture-handler.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "build": "rm -rf lib/ && tsc",
+        "copy-files": "cp package.json lib/package.json && cp README.md lib/README.md",
+        "build-ready-publish": "npm run build && npm run copy-files",
+        "update-version": "node update-version.js"
+    },
+    "dependencies": {
+        "hammerjs": "^2.0.8",
+        "react": "^16.13.0",
+        "typescript": "~3.7.2"
+    },
+    "devDependencies": {
+        "@types/hammerjs": "^2.0.36",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.0"
+    },
+    "peerDependencies": {
+        "hammerjs": "^2.0.8"
+    },
+    "bugs": {
+        "url": "https://github.com/elsa-santos/react-gesture-handler/issues"
+    },
+    "homepage": "https://github.com/elsa-santos/react-gesture-handler#readme",
+    "directories": {
+        "lib": "lib"
+    }
+}
