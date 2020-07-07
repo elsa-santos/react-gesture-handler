@@ -5,7 +5,7 @@ import { GesturesProps, RecognizersType } from './models/Gestures.models';
 export const Gestures = ({
   children,
   options,
-  recognizers
+  recognizers,
 }: GesturesProps): JSX.Element => {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -18,12 +18,12 @@ export const Gestures = ({
      * initialize hammerJS
      */
     if ($container) {
-      hammer = new Hammer($container, options);
+      hammer = new Hammer.Manager($container, options);
 
       if (recognizers && hammer !== undefined) {
         recognizersKeyType = Object.keys(recognizers) as RecognizersType[];
 
-        recognizersKeyType.forEach(recognizerType => {
+        recognizersKeyType.forEach((recognizerType) => {
           const events = recognizers[recognizerType]?.events;
           const options = recognizers[recognizerType]?.options;
 
@@ -40,7 +40,7 @@ export const Gestures = ({
 
     return () => {
       if ($container && hammer && recognizers) {
-        recognizersKeyType.forEach(recognizerType => {
+        recognizersKeyType.forEach((recognizerType) => {
           const events = recognizers[recognizerType]?.events;
           if (events) {
             Object.entries(events).forEach(([eventName, event]) => {

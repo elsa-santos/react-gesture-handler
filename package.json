@@ -1,7 +1,7 @@
 {
     "name": "react-gesture-handler",
     "title": "react-gesture-handler",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "React component to detect touch gestures",
     "keywords": [
         "react",
